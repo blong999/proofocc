@@ -1,8 +1,9 @@
+import React from "react";
 import logo from './logo.svg';
 import './App.css';
-import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Navigation, Footer, Home, Notes, Contact } from "./components";
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 
 
 function App() {
@@ -16,9 +17,10 @@ function App() {
           <Route path="/contact" exact component={() => <Contact />} />
         </Switch>
         <Footer />
+        <AmplifySignOut />
       </Router>
     </div>
   );
 }
 
-export default App;
+export default withAuthenticator(App);
