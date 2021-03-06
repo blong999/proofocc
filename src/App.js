@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Navigation, Footer, Home, About, Contact } from "./components";
+import { Navigation, Footer, Home, Notes, Contact } from "./components";
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <Navigation />
         <Switch>
           <Route path="/" exact component={() => <Home />} />
-          <Route path="/about" exact component={() => <About />} />
+          <Route path="/notes" exact component={() => <Notes />} />
           <Route path="/contact" exact component={() => <Contact />} />
         </Switch>
         <Footer />
