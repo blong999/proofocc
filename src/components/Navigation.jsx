@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 
 function Navigation(props) {
   return (
@@ -39,6 +40,9 @@ function Navigation(props) {
                 <Link class="nav-link" to="/contact">
                   Contact
                 </Link>
+                </li>
+              <li>
+                <AmplifySignOut />
               </li>
             </ul>
           </div>

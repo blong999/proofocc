@@ -3,8 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Navigation, Footer, Home, Notes, Contact } from "./components";
-import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
-
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 
 function App() {
   return (
